@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- =========================
+         PROJECT: ADVANCED E-COMMERCE WEBSITE
+         TECHNOLOGIES: HTML, CSS, JAVASCRIPT
+         DEVELOPER STYLE: CLEAN, COMMENTED, STRUCTURED
+    ========================= -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlowShop | Advanced E-Commerce</title>
+
+    <!-- =========================
+         EXTERNAL GOOGLE FONT
+    ========================= -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- =========================
+         INTERNAL CSS (ADVANCED STYLING)
+    ========================= -->
+    <style>
+        /* ===== GLOBAL RESET ===== */
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins', sans-serif;
+        }
+
+        body{
+            background:#f6f7fb;
+            color:#333;
+        }
+
+        /* =========================
+           NAVBAR SECTION
+        ========================= */
+        /* NAVBAR CONTAINER */
+        header{
+            position:sticky;
+            top:0;
+            z-index:1000;
+            background:#111;
+            padding:15px 40px;
+        }
+
+        /* NAVBAR FLEX */
+        .navbar{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        /* LOGO */
+        .logo{
+            font-size:24px;
+            font-weight:700;
+            color:#fff;
+        }
+
+        /* NAV LINKS */
+        .nav-links{
+            list-style:none;
+            display:flex;
+            gap:30px;
+        }
+
+        .nav-links li a{
+            text-decoration:none;
+            color:#fff;
+            font-size:16px;
+            position:relative;
+            padding:5px 0;
+        }
+
+        /* ADVANCED HOVER ANIMATION */
+        .nav-links li a::after{
+            content:'';
+            position:absolute;
+            left:0;
+            bottom:0;
+            width:0;
+            height:2px;
+            background:#00ffcc;
+            transition:0.4s ease;
+        }
+
+        .nav-links li a:hover::after{
+            width:100%;
+        }
+
+        /* =========================
+           HERO SECTION
+        ========================= */
+        .hero{
+            height:90vh;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            padding:60px;
+            background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+            color:#fff;
+        }
+
+        .hero-text{
+            max-width:50%;
+        }
+
+        .hero-text h1{
+            font-size:52px;
+            margin-bottom:20px;
+        }
+
+        .hero-text p{
+            font-size:18px;
+            line-height:1.6;
+            margin-bottom:30px;
+        }
+
+        .hero-text button{
+            padding:14px 35px;
+            border:none;
+            background:#00ffcc;
+            color:#000;
+            font-size:16px;
+            font-weight:600;
+            cursor:pointer;
+            transition:0.4s;
+        }
+
+        .hero-text button:hover{
+            background:#fff;
+            transform:translateY(-3px);
+        }
+
+        /* =========================
+           PRODUCT SECTION
+        ========================= */
+        .products{
+            padding:80px 60px;
+        }
+
+        .products h2{
+            text-align:center;
+            font-size:36px;
+            margin-bottom:50px;
+        }
+
+        /* PRODUCT GRID */
+        .product-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:30px;
+        }
+
+        /* PRODUCT CARD */
+        .product-card{
+            background:#fff;
+            border-radius:15px;
+            overflow:hidden;
+            box-shadow:0 15px 40px rgba(0,0,0,0.1);
+            transition:0.5s ease;
+            position:relative;
+        }
+
+        /* ADVANCED CARD HOVER */
+        .product-card:hover{
+            transform:translateY(-12px) scale(1.03);
+            box-shadow:0 30px 60px rgba(0,0,0,0.2);
+        }
+
+        /* PRODUCT IMAGE */
+        .product-card img{
+            width:100%;
+            height:220px;
+            object-fit:cover;
+        }
+
+        /* PRODUCT INFO */
+        .product-info{
+            padding:20px;
+        }
+
+        .product-info h3{
+            font-size:20px;
+            margin-bottom:10px;
+        }
+
+        .price{
+            font-size:18px;
+            font-weight:600;
+            color:#00b894;
+            margin-bottom:15px;
+        }
+
+        /* ADD TO CART BUTTON */
+        .add-cart{
+            width:100%;
+            padding:12px;
+            border:none;
+            background:#111;
+            color:#fff;
+            cursor:pointer;
+            transition:0.4s;
+        }
+
+        .add-cart:hover{
+            background:#00ffcc;
+            color:#000;
+        }
+
+        /* =========================
+           FOOTER SECTION
+        ========================= */
+        footer{
+            background:#111;
+            color:#fff;
+            text-align:center;
+            padding:25px;
+            margin-top:60px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- =========================
+     NAVBAR START
+========================= -->
+<header>
+    <div class="navbar">
+        <div class="logo">GlowShop</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+</header>
+<!-- =========================
+     NAVBAR END
+========================= -->
+
+<!-- =========================
+     HERO SECTION START
+========================= -->
+<section class="hero">
+    <div class="hero-text">
+        <h1>Modern E-Commerce Experience</h1>
+        <p>High quality products with advanced UI animations and smooth shopping experience just like professional brands.</p>
+        <button>Shop Now</button>
+    </div>
+</section>
+<!-- =========================
+     HERO SECTION END
+========================= -->
+
+<!-- =========================
+     PRODUCTS SECTION START
+========================= -->
+<section class="products">
+    <h2>Featured Products</h2>
+    <div class="product-grid">
+
+        <!-- PRODUCT CARD 1 -->
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" alt="Product">
+            <div class="product-info">
+                <h3>Smart Watch</h3>
+                <p class="price">$120</p>
+                <button class="add-cart" onclick="addToCart('Smart Watch')">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- PRODUCT CARD 2 -->
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9" alt="Product">
+            <div class="product-info">
+                <h3>Smart Phone</h3>
+                <p class="price">$699</p>
+                <butt
+                on class="add-cart" onclick="addToCart('Smart Phone')">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- PRODUCT CARD 3 -->
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad" alt="Product">
+            <div class="product-info">
+                <h3>Wireless Headphones</h3>
+                <p class="price">$89</p>
+                <button class="add-cart" onclick="addToCart('Headphones')">Add to Cart</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- =========================
+     PRODUCTS SECTION END
+========================= -->
+
+<!-- =========================
+     FOOTER START
+========================= -->
+<footer>
+    <p>© 2025 GlowShop | Designed Like a Professional Developer</p>
+</footer>
+<!-- =========================
+     FOOTER END
+========================= -->
+
+<!-- =========================
+     JAVASCRIPT SECTION
+========================= -->
+<script>
+    // SIMPLE CART FUNCTIONALITY
+    let a=2;
+let b=3;
+
+console.log(a,b);
+
+let c=b;
+b=a;
+a=c;
+</script>
+
+</body>
+</html>
